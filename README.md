@@ -9,7 +9,7 @@ The **Sandbox** is just a way to implement the **Facade** pattern on top of feat
 A **Module** is an independent unit of a page. **Modules** know nothing about each other. To make them communicate, a **PubSub** pattern is used.
 
 
-###Technologies used:
+###Technologies / tools used:
 1. Node.js - Server
 2. Socket.io - Real time engine
 3. Express.js - Web App Framework
@@ -23,6 +23,7 @@ A **Module** is an independent unit of a page. **Modules** know nothing about ea
 11. Jasmine - BDD Testing
 12. HTML5 - Markup Language
 13. CSS3 - Cascading Style Sheets
+14. JSDoc - JavaScript source code annotations
 
 ###Custom
 1. Custom UI - Responsive, CSS3 + animations, mobile ready interface
