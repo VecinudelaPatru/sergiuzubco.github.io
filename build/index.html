@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="utf-8">
+  <title>Dragonstone | An application with purpose.</title>
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" sizes="57x57" href="/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+  <link rel="stylesheet" type="text/css" href="css/app.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <script src="/lib/jquery.min.js"></script>
+</head>
+<body>
+  <header class="bar bar-standard bar-nav">
+    <h1 class="title">
+      <a href="#chat"><i class="fa fa-diamond"></i>Dragonstone</a>
+    </h1>
+  </header>
+
+  <div class="bar bar-standard bar-header-secondary">
+    <p></p>
+    <div class="segmented-control" id="segmented-control">
+      <a class="control-item" href="#chat"><i class="fa fa-weixin"></i>&nbsp;Chat</a>
+      <a class="control-item" href="#gallery"><i class="fa fa-picture-o"></i>&nbsp;Photos</a>
+      <a class="control-item" href="#settings"><i class="fa fa-cogs"></i>&nbsp;Settings</a>
+    </div>
+  </div>
+
+  <div class="bar bar-footer">
+    <div id="chat-form" class="padding-0-1">
+      <div class="input-group">
+        <input type="text" autocomplete="off" placeholder="Type your message here..." />
+        <span><button class="btn btn-primary"><i class="fa fa-paper-plane"></i>&nbsp;Send</button></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="backdrop" id="backdrop">
+    <div><i class="fa fa-refresh fa-spin"></i>&nbsp;Loading...</div>
+  </div>
+
+  <div class="content">
+    <p></p>
+    <div class="card">
+      <div id="chat" class="control-content">
+        <div class="chat-messages clearfix padding-1"></div>
+      </div>
+      <div id="gallery" class="control-content">
+        <div class="gallery-outer">
+          <i class="fa fa-chevron-left fa-3x"></i>
+          <i class="fa fa-chevron-right fa-3x"></i>
+          <div class="gallery" style="width: 100%; height: 600px;"></div>
+        </div>
+      </div>
+      <div id="settings" class="control-content">
+        <div class="padding-1">
+          <section class="accordion">
+            <div>
+              <input type="checkbox" class="ac-c" name="settings-accordion" id="ac-1" />
+              <label for="ac-1"><i class="fa fa-flickr"></i>&nbsp;Photo settings</label>
+              <article>
+                <h5>Width:</h5>
+                <div class="input-group">
+                  <input id="wslider" type="range" min="10" max="100" step="5" />
+                  <span id="wslidertext">&nbsp;100%</span>
+                </div>
+                <h5>Height:</h5>
+                <div class="input-group">
+                  <input id="hslider" type="range" min="480" max="800" step="10" />
+                  <span id="hslidertext">&nbsp;480px</span>
+                </div>
+              </article>
+            </div>
+            <div>
+              <input type="checkbox" class="ac-c" name="settings-accordion" id="ac-2" />
+              <label for="ac-2"><i class="fa fa-comments-o"></i>&nbsp;Chat settings</label>
+              <article>
+                <h5>Chat name:</h5>
+                <div class="input-group">
+                  <input id="chatname" type="text" autocomplete="off" placeholder="Your name" />
+                  <span>
+                    <button class="btn btn-primary" id="chatnamebtn"><i class="fa fa-user"></i>&nbsp;Change name</button>
+                  </span>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+    <p></p>
+  </div>
+  <!--<script src="http://185.13.90.140:8081/socket.io/socket.io.js"></script>-->
+  <script src="/js/build.min.js"></script>
+</body>
+</html>
