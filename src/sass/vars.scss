@@ -1,0 +1,38 @@
+// type
+$font-family-default: "Helvetica Neue", Helvetica, sans-serif !default;
+$font-size-default: 17px !default;
+$font-weight: 500 !default;
+$font-weight-light: 400 !default;
+$line-height-default: 21px !default;
+
+// colors
+$primary-color: #428bca !default;
+$chrome-color:  #fff !default;
+$default-color:  #fff !default;
+$positive-color: #5cb85c !default;
+$negative-color: #d9534f !default;
+$bubble-color: #f2f2f2 !default;
+
+// bars
+$bar-base-height:  44px !default;
+$bar-second-height:  114px !default;
+$bar-tab-height:   50px !default;
+$bar-side-spacing: 10px !default;
+$bar-spacing: 5px !default;
+
+// cards
+$card-bg: #fff !default;
+
+// buttons
+$button-font-size: 12px !default;
+
+// transitions
+$timing-fuction: cubic-bezier(.1,.5,.1,1) !default;
+
+// borders
+$border-default-width: 1px;
+$border-default: $border-default-width solid #ddd;
+$border-radius: 6px !default;
+$border-positive: $border-default-width solid $primary-color;
+
+$base-padding: 5px;
