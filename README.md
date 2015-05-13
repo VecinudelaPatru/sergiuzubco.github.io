@@ -25,3 +25,8 @@
 3. Module
 4. PubSub
 5. Sandbox
+
+###Setup:
+1. Install Node.js
+2. Run node index.js
+3. Open [localhost](http://localhost:3000/)
