@@ -1,24 +1,27 @@
-Dragonstone App
+#Dragonstone App
+**Scalable JavaScript Application built w/ Module-Sandbox-Core Pattern**
 
-Node.js - Server
-Socket.io - Real time engine
-Express.js - Web App Framework
-Gulp - Streaming build system
-Sass - CSS extension language
-Uglify - JavaScript parser / compressor
-Concat - Streaming concat middleware
-JsHint - JavaScript code quality tool
-jQuery - Cross-platform JavaScript library
-Font Awesome - Scalable vector icons
+###Technologies used:
+1. Node.js - Server
+2. Socket.io - Real time engine
+3. Express.js - Web App Framework
+4. Gulp - Streaming build system
+5. Sass - CSS extension language
+6. Uglify - JavaScript parser / compressor
+7. Concat - Streaming concat middleware
+8. JsHint - JavaScript code quality tool
+9. jQuery - Cross-platform JavaScript library
+10. Font Awesome - Scalable vector icons
+11. Jasmine - BDD Testing
 
-Jasmine - BDD Testing
+###Custom
+1. Custom UI - Responsive, CSS3 + animations, mobile-ready interface
+2. Custom Router
 
-Observer / Facade / Module
-PubSub
-Modules
-Sandbox
-Custom UI
-Custom Router
 
-Core - Modules manager / Controller -> Manage module lifecycle / Enable inter-module communication / Extensible
-Sandbox - Facade interface for all existing modules -> Consistency / Security / Communication
+###Patterns:
+1. Observer
+2. Facade
+3. Module
+4. PubSub
+5. Sandbox
