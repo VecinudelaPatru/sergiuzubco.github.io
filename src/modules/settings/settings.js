@@ -5,7 +5,9 @@ Core.register('settings', function(sandbox) {
   var settings, wSlider, hSlider, username, button, wSliderText, hSliderText;
 
   return {
-
+    /**
+     * Constructor
+     */
     construct: function() {
       settings = sandbox.query('#settings');
       wSlider = sandbox.find('#wslider')[0];
@@ -20,6 +22,9 @@ Core.register('settings', function(sandbox) {
       sandbox.addEvent(button, 'click', this.setChatName);
     },
 
+    /**
+     * Destructor
+     */
     destruct: function() {
       settings = wSlider = hSlider = wSliderText = hSliderText = null;
 
@@ -27,16 +32,26 @@ Core.register('settings', function(sandbox) {
       sandbox.removeEvent(hSlider, 'click', this.changeHeight);
     },
 
+    /**
+     * Show module
+     */
     show: function() {
       sandbox.addClass(settings, 'active');
       sandbox.publish('module-shown', 'settings');
     },
 
+    /**
+     * Hide module
+     */
     hide: function() {
       sandbox.removeClass(settings, 'active');
       sandbox.publish('module-hidden', 'settings');
     },
 
+    /**
+     * Publish width changed event
+     * @param event
+     */
     changeWidth: function(event) {
       var value = event.currentTarget.value;
 
@@ -44,6 +59,10 @@ Core.register('settings', function(sandbox) {
       sandbox.publish('new-width', value);
     },
 
+    /**
+     * Publish height changed event
+     * @param event
+     */
     changeHeight: function(event) {
       var value = event.currentTarget.value;
 
@@ -51,6 +70,9 @@ Core.register('settings', function(sandbox) {
       sandbox.publish('new-height', value);
     },
 
+    /**
+     * Publish chat name changed event
+     */
     setChatName: function() {
       var name = username.value;
 

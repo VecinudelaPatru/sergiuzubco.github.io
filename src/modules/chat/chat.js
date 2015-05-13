@@ -4,6 +4,11 @@
 Core.register('chat', function(sandbox) {
   var chat, socket, chatBody, user;
 
+  /**
+   * Create new chat bubble
+   * @type {{createBubble: Function}}
+   * @private
+   */
   var _private = {
     createBubble: function(data) {
       return sandbox.createElement('p', {
@@ -15,7 +20,9 @@ Core.register('chat', function(sandbox) {
   };
 
   return {
-
+    /**
+     * Constructor
+     */
     construct: function() {
       //socket = io.connect('http://185.13.90.140:8081');
       chat = sandbox.query('#chat')[0];
@@ -28,20 +35,33 @@ Core.register('chat', function(sandbox) {
       //this.connect();
     },
 
+    /**
+     * Destructor
+     */
     destruct: function() {
       chat = socket = chatBody = null;
     },
 
+    /**
+     * Show module
+     */
     show: function() {
       sandbox.addClass(chat, 'active');
       sandbox.publish('module-shown', 'chat');
     },
 
+    /**
+     * Hide module
+     */
     hide: function() {
       sandbox.removeClass(chat, 'active');
       sandbox.publish('module-hidden', 'chat');
     },
 
+    /**
+     * Emit new message and display it
+     * @param message
+     */
     addNewMessage: function(message) {
       var data = {};
 
@@ -54,6 +74,9 @@ Core.register('chat', function(sandbox) {
       socket.emit('message', { user: user, message: message });
     },
 
+    /**
+     * Connect to socket.io server
+     */
     connect: function() {
       socket.on('message', function(data) {
         data.className = 'bubble pull-left';
@@ -61,6 +84,10 @@ Core.register('chat', function(sandbox) {
       });
     },
 
+    /**
+     * Change chat name
+     * @param name
+     */
     changeName: function(name) {
       user = name;
     }

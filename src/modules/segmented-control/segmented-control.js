@@ -10,6 +10,9 @@ Core.register('segmented-control', function(sandbox) {
     };
 
   return {
+    /**
+     * Constructor
+     */
     construct: function() {
       controls = sandbox.find('a');
 
@@ -17,14 +20,25 @@ Core.register('segmented-control', function(sandbox) {
       sandbox.subscribe('module-hidden', this.deactivateControl);
     },
 
+    /**
+     * Destructor
+     */
     destruct: function() {
       controls = null;
     },
 
+    /**
+     * Activate a control
+     * @param module
+     */
     activateControl: function(module) {
       sandbox.addClass(controls[modulesMap[module]], 'active');
     },
 
+    /**
+     * Deactivate a control
+     * @param module
+     */
     deactivateControl: function(module) {
       sandbox.removeClass(controls[modulesMap[module]], 'active');
     }
